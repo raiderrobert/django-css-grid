@@ -10,8 +10,11 @@ A django app for creating css grids
     class PollsListView(CSSGridMixin, ListView):
         
         queryset = Poll.objects.all()
-        css_grid = [
+        
+        grid-template-columns = ['120px', '120px', '120px']
+        grid-template-areas = [
             ['header', 'header', 'header],
             ['sidebar', 'content', 'content']
         ]
+        grid_gap = '10px'
         
