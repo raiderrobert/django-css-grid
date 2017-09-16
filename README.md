@@ -11,7 +11,7 @@ A django app for creating css grids
         
         queryset = Poll.objects.all()
         css_grid = [
-          ['header', 'header', 'header],
-          ['sidebar', 'content', 'content']
+            ['header', 'header', 'header],
+            ['sidebar', 'content', 'content']
         ]
         
