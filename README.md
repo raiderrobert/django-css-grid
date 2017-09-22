@@ -33,6 +33,16 @@ A django app for creating css grids
             </style>
         </head>
         <body>
-            Hello World!
+            <div class="wrapper">
+                <div class="header">
+                    Hello World!
+                </div>
+                <div class="sidebar">
+                    Pssst
+                </div>
+                <div class="content">
+                    The main thang!
+                </div>
+            </div>
         </body>
     </html>
