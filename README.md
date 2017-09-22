@@ -17,4 +17,22 @@ A django app for creating css grids
             ['sidebar', 'content', 'content']
         ]
         grid_gap = '10px'
-        
+    
+    
+    
+    # templates/polls/list.html
+    <!DOCTYPE html>
+    {% load css_grid %}
+
+    <html>
+        <head>
+            <title>Hello World!</title>
+            <meta charset="utf-8">
+            <style>
+                {% css_grid %}
+            </style>
+        </head>
+        <body>
+            Hello World!
+        </body>
+    </html>
