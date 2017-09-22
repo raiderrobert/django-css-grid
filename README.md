@@ -14,7 +14,7 @@ A django app for creating css grids
         grid_wrapper = 'polls-wrapper'
         grid_template_columns = ['120px', '120px', '120px']
         grid_template_areas = [
-            ['header', 'header', 'header],
+            ['header', 'header', 'header'],
             ['sidebar', 'content', 'content']
         ]
         grid_gap = '10px'
