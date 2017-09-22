@@ -11,8 +11,9 @@ A django app for creating css grids
         
         queryset = Poll.objects.all()
         
-        grid-template-columns = ['120px', '120px', '120px']
-        grid-template-areas = [
+        grid_wrapper = 'polls-wrapper'
+        grid_template_columns = ['120px', '120px', '120px']
+        grid_template_areas = [
             ['header', 'header', 'header],
             ['sidebar', 'content', 'content']
         ]
