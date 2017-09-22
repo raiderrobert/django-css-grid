@@ -29,18 +29,18 @@ A django app for creating css grids
             <title>Hello World!</title>
             <meta charset="utf-8">
             <style>
-                {% css_grid %}
+                {% grid %}
             </style>
         </head>
         <body>
-            <div class="wrapper">
-                <div class="header">
+            <div {% grid_wrapper %}>
+                <div {% grid_area 'header' %}>
                     Hello World!
                 </div>
-                <div class="sidebar">
+                <div {% grid_area 'sidebar' %}>
                     Pssst
                 </div>
-                <div class="content">
+                <div {% grid_area 'content' %}>
                     The main thang!
                 </div>
             </div>
