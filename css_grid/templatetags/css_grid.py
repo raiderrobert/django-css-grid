@@ -66,6 +66,7 @@ def grid_wrapper(context):
     grid_wrapper = context['css-grid'].get('grid_wrapper', None)
     return f'class={grid_wrapper}'
 
+
 @register.simple_tag(takes_context=True)
 def grid_area(context, area_name):
     return f'class={area_name}'
