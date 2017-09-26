@@ -1,5 +1,7 @@
 # django-css-grid
 
+A django app for creating css grids
+
 ## Install via pip
 
     pip install git+https://github.com/raiderrobert/django-css-grid/
@@ -8,14 +10,8 @@
 
 I'm going to make some assumptions about what's around us. These are predicated on following the Django tutorial: https://docs.djangoproject.com/en/1.11/intro/tutorial01/
 
-## Add to installed apps
-    INSTALLED_APPS = [
-        ...
-        'css_grid',
-        'polls'
-    ]
 
-A django app for creating css grids
+## Assuming you have the following model
     
     # polls/models.py
     from django.db import models
@@ -27,8 +23,16 @@ A django app for creating css grids
 
         def __str__(self):
             return self.question_text
-    
-    
+
+## Add to installed apps
+    INSTALLED_APPS = [
+        ...
+        'css_grid',
+        'polls'
+    ]
+
+
+## Use the CSSGridMixin on a View
     
     # polls/views.py
     from django.views import ListView
@@ -49,7 +53,7 @@ A django app for creating css grids
         grid_gap = '10px'
     
     
-    
+## Load the css_grid library and place the template tags appropriately
     # polls/templates/polls/list.html
     {% load css_grid %}
     <!DOCTYPE html>
