@@ -1,27 +1,40 @@
 # django-css-grid
 A django app for creating css grids
+    
+    # polls/models.py
+    from django.db import models
+    
+    
+    class Question(models.Model):
+        question_text = models.CharField(max_length=200)
+        pub_date = models.DateTimeField('date published')
 
-    # views.py
+        def __str__(self):
+            return self.question_text
+    
+    
+    
+    # polls/views.py
     from django.views import ListView
     from cssgrid import CSSGridMixin
-    from .models import Poll
+    from .models import Question
     
     
     class PollsListView(CSSGridMixin, ListView):
-        
-        queryset = Poll.objects.all()
-        
+        queryset = Question.objects.all()
+
         grid_wrapper = 'polls-wrapper'
         grid_template_columns = ['120px', '120px', '120px']
         grid_template_areas = [
-            ['header', 'header', 'header'],
-            ['sidebar', 'content', 'content']
+            ['sidebar', 'content'],
+            ['sidebar', 'content'],
+            ['header', 'header']
         ]
         grid_gap = '10px'
     
     
     
-    # templates/polls/list.html
+    # polls/templates/polls/list.html
     {% load css_grid %}
     <!DOCTYPE html>
 
