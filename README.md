@@ -64,17 +64,25 @@ I'm going to make some assumptions about what's around us. These are predicated 
             <meta charset="utf-8">
             <style>
                 {% grid %}
+                
+            .box {
+              background-color: #444;
+              color: #fff;
+              border-radius: 5px;
+              padding: 20px;
+              font-size: 150%;
+            }
             </style>
         </head>
         <body>
             <div {% grid_wrapper %}>
-                <div {% grid_area 'header' %}>
+                <div class="header box">
                     Hello World!
                 </div>
-                <div {% grid_area 'sidebar' %}>
+                <div class="sidebar box">
                     Pssst
                 </div>
-                <div {% grid_area 'content' %}>
+                <div class="content box">
                     The main thang!
                 </div>
             </div>
