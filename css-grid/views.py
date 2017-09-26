@@ -20,9 +20,11 @@ class CSSGridMixin(object):
         """
         context = super(SingleObjectMixin, self).get_context_data(**context)
         context.update({
-            'grid_wrapper': self._prefix + self.grid_wrapper,
-            'grid-template-columns': self._prefix + self.grid_template_columns,
-            'grid-template-areas': self._prefix + self.grid_template_areas,
-            'grid-gap': self._prefix + self.grid_gap
+            self._prefix: {
+                'grid_wrapper': self.grid_wrapper,
+                'grid-template-columns': self.grid_template_columns,
+                'grid-template-areas': self.grid_template_areas,
+                'grid-gap': self.grid_gap
+            }
         })
         return context
