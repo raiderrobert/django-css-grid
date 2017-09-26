@@ -36,7 +36,7 @@ def make_template_area(areas):
     if any(isinstance(i, list) for i in areas):
         try:
             l =[make_template_area(sublist) for sublist in areas]
-            return '\n'.join(l)
+            return ' '.join(l)
         except ValueError:
             pass
 
@@ -58,7 +58,7 @@ def format_to_css(l):
 
 def get_columns(g):
     columns = g.get('grid-template-columns', [])
-    return format_to_css(columns)
+    return ' '.join(columns)
 
 
 @register.simple_tag(takes_context=True)
