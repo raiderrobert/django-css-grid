@@ -70,34 +70,3 @@ def grid_wrapper(context):
 def grid_area(context, area_name):
     return f'class={area_name}'
 
-'''
-
-	.sidebar {
-		grid-area: sidebar;
-	}
-
-	.content {
-		grid-area: content;
-	}
-
-	.header {
-		grid-area: header;
-	}
-
-
-	.wrapper {
-		display: grid;
-    grid-gap: 10px;
-		grid-template-columns: 120px  120px  120px;
-		grid-template-areas:
-               "....... header  header"
-							 "sidebar content content";
-		background-color: #fff;
-		color: #444;
-	}
-
-
-
-   
-
-'''
