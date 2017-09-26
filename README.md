@@ -1,4 +1,20 @@
 # django-css-grid
+
+## Install via pip
+
+    pip install git+https://github.com/raiderrobert/django-css-grid/
+
+## Working from Django tutorial
+
+I'm going to make some assumptions about what's around us. These are predicated on following the Django tutorial: https://docs.djangoproject.com/en/1.11/intro/tutorial01/
+
+## Add to installed apps
+    INSTALLED_APPS = [
+        ...
+        'css_grid',
+        'polls'
+    ]
+
 A django app for creating css grids
     
     # polls/models.py
