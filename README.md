@@ -22,8 +22,8 @@ A django app for creating css grids
     
     
     # templates/polls/list.html
-    <!DOCTYPE html>
     {% load css_grid %}
+    <!DOCTYPE html>
 
     <html>
         <head>
