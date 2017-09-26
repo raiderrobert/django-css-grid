@@ -67,7 +67,7 @@ def grid_wrapper(context):
     return f'class={grid_wrapper}'
 
 
-@register.simple_tag(takes_context=True)
-def grid_area(context, area_name):
+@register.simple_tag()
+def grid_area(area_name):
     return f'class={area_name}'
 
