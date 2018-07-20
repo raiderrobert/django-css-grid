@@ -36,7 +36,7 @@ I'm going to make some assumptions about what's around us. These are predicated 
     
     # polls/views.py
     from django.views import ListView
-    from cssgrid import CSSGridMixin
+    from cssgrid.views import CSSGridMixin
     from .models import Question
     
     
